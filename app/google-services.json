@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "283080767593",
+    "firebase_url": "https://schoolmeal-c14cb.firebaseio.com",
+    "project_id": "schoolmeal-c14cb",
+    "storage_bucket": "schoolmeal-c14cb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:283080767593:android:8f2055d893eeb3073e4af8",
+        "android_client_info": {
+          "package_name": "com.grapefruit.schoolmeal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "283080767593-861f90lcifp1hth1irdlie46ggkg3dc7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.grapefruit.schoolmeal",
+            "certificate_hash": "d1feb28e0f2b653a0d5f0619e1e85ea05cbfc330"
+          }
+        },
+        {
+          "client_id": "283080767593-3tnjmu45j9kadt7gs9nb62dkpohf3ue7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiqoIJVjTIzPZ8eIDZCLyzeAbA1_iyssI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "283080767593-3tnjmu45j9kadt7gs9nb62dkpohf3ue7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
