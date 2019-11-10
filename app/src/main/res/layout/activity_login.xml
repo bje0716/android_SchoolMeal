@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="activity"
+            type="com.grapefruit.schoolmeal.LoginActivity" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".LoginActivity"
+        android:padding="32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="24sp"
+                android:text="{cmd-food} 오늘의 급식"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="{cmd-login} 로그인"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:iiv_icon="cmd-email-outline"
+                    app:iiv_size="28dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp"/>
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edt_login_bg"
+                    android:padding="12dp"
+                    android:singleLine="true"
+                    android:inputType="textEmailAddress"
+                    android:hint="이메일" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <com.mikepenz.iconics.view.IconicsImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:iiv_icon="cmd-key-outline"
+                    app:iiv_size="28dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="12dp" />
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edt_login_bg"
+                    android:padding="12dp"
+                    android:inputType="textWebPassword"
+                    android:singleLine="true"
+                    android:hint="패스워드"/>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:backgroundTint="@android:color/black"
+                app:cornerRadius="6dp"
+                app:rippleColor="@android:color/transparent"
+                style="?android:attr/borderlessButtonStyle"
+                android:text="{cmd-login} 로그인"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:onClick="@{activity::submit}"
+                android:padding="12dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:backgroundTint="@android:color/white"
+                app:strokeColor="@android:color/black"
+                app:strokeWidth="1dp"
+                android:onClick="@{activity::signIn}"
+                style="?android:attr/borderlessButtonStyle"
+                app:rippleColor="@android:color/transparent"
+                android:text="{cmd-account-plus} 회원가입"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:padding="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="계정을 잃어버리셨나요?"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:onClick="@{activity::findAccount}"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="12dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="36dp">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1px"
+                    android:background="@android:color/black"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" 소셜 로그인 "
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:textSize="14sp"/>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1px"
+                    android:background="@android:color/black"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{activity::gso}"
+                style="?android:attr/borderlessButtonStyle"
+                app:rippleColor="@android:color/transparent"
+                app:backgroundTint="#dd4b39"
+                android:padding="12dp"
+                android:layout_marginTop="12dp"
+                android:textStyle="bold"
+                android:text="{cmd-google} 구글 계정으로 로그인"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?android:attr/borderlessButtonStyle"
+                app:rippleColor="@android:color/transparent"
+                app:backgroundTint="#3b5998"
+                android:padding="12dp"
+                android:onClick="@{activity::fb}"
+                android:textStyle="bold"
+                android:text="{cmd-facebook-box} 페이스북 계정으로 로그인"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
