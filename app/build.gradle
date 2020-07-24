@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.grapefruit.schoolmeal"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled true
+    }
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.preference:preference:1.1.1'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'com.squareup.okhttp3:okhttp:4.8.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    implementation 'de.psdev.licensesdialog:licensesdialog:2.1.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'gun0912.ted:tedpermission:2.2.3'
+    implementation 'com.afollestad.material-dialogs:core:3.3.0'
+    implementation 'com.mikepenz:iconics-core:4.0.2'
+    implementation 'com.mikepenz:google-material-typeface:3.0.1.4.original-kotlin@aar'
+    implementation 'com.mikepenz:material-design-iconic-typeface:2.2.0.6-kotlin@aar'
+    implementation 'com.mikepenz:fontawesome-typeface:5.9.0.0-kotlin@aar'
+    implementation 'com.mikepenz:octicons-typeface:3.2.0.6-kotlin@aar'
+    implementation 'com.mikepenz:meteocons-typeface:1.1.0.5-kotlin@aar'
+    implementation 'com.mikepenz:community-material-typeface:5.3.45.1-kotlin@aar' // note 5.3.45.1 alphabetically sorts, and merges in 3 sections
+    implementation 'com.mikepenz:weather-icons-typeface:2.0.10.5-kotlin@aar'
+    implementation 'com.mikepenz:typeicons-typeface:2.0.7.5-kotlin@aar'
+    implementation 'com.mikepenz:entypo-typeface:1.0.0.5-kotlin@aar'
+    implementation 'com.mikepenz:devicon-typeface:2.0.0.5-kotlin@aar'
+    implementation 'com.mikepenz:foundation-icons-typeface:3.0.0.5-kotlin@aar'
+    implementation 'com.mikepenz:ionicons-typeface:2.0.1.5-kotlin@aar'
+    implementation 'com.mikepenz:pixeden-7-stroke-typeface:1.2.0.3-kotlin@aar'
+    implementation 'com.mikepenz:material-design-icons-dx-typeface:5.0.1.0-kotlin@aar'
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+}
